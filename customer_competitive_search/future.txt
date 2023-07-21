@@ -1,0 +1,6 @@
+
+customer1 : what is equivalnet product of cisco :plm_contact1
+customer1 : what is equivalent product over juniper :plm_contact1
+customer1 : what is equivalent product over juniper? : plm_contact1
+customer1 : what is equivalent product over juniper : plm_contact1
+customer1 : what is equivalent product over juniper  cisco : plm_contact1
