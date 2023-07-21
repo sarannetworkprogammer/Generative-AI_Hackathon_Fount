@@ -1,0 +1,346 @@
+2023-07-15 13:17:23 [INFO] Question: what was average fare pricef
+2023-07-15 13:17:23 [INFO] Running PandasAI with openai LLM...
+2023-07-15 13:17:23 [INFO] Prompt ID: 8fa8a66b-505f-4d6a-a23a-f839bddcbf50
+2023-07-15 13:17:24 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: <"KEY">. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-07-15 13:19:19 [INFO] Question: give summary of this data set
+
+2023-07-15 13:19:19 [INFO] Running PandasAI with openai LLM...
+2023-07-15 13:19:19 [INFO] Prompt ID: 4c4d7b43-3919-4ad8-b8e5-27df534b4a71
+2023-07-15 13:19:20 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: <"KEY">. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-07-15 13:31:12 [INFO] Question: what is the summary of dataset
+
+2023-07-15 13:31:12 [INFO] Running PandasAI with openai LLM...
+2023-07-15 13:31:12 [INFO] Prompt ID: 09ce1806-3f8b-4d39-8063-0c7e36f124dc
+2023-07-15 13:31:12 [INFO] 
+                        Code generated:
+                        ```
+                        df.describe()
+                        ```
+                    
+2023-07-15 13:31:12 [INFO] 
+Code running:
+```
+df.describe()
+```
+2023-07-15 13:31:13 [INFO] Answer:        PassengerId    Survived      Pclass         Age       SibSp       Parch        Fare
+count   891.000000  891.000000  891.000000  714.000000  891.000000  891.000000  891.000000
+mean    446.000000    0.383838    2.308642   29.699118    0.523008    0.381594   32.204208
+std     257.353842    0.486592    0.836071   14.526497    1.102743    0.806057   49.693429
+min       1.000000    0.000000    1.000000    0.420000    0.000000    0.000000    0.000000
+25%     223.500000    0.000000    2.000000   20.125000    0.000000    0.000000    7.910400
+50%     446.000000    0.000000    3.000000   28.000000    0.000000    0.000000   14.454200
+75%     668.500000    1.000000    3.000000   38.000000    1.000000    0.000000   31.000000
+max     891.000000    1.000000    3.000000   80.000000    8.000000    6.000000  512.329200
+2023-07-15 13:31:13 [INFO] Executed in: 0.7555820941925049s
+2023-07-15 13:31:36 [INFO] Question: give  summary of dataset
+
+2023-07-15 13:31:36 [INFO] Running PandasAI with openai LLM...
+2023-07-15 13:31:36 [INFO] Prompt ID: 8e8c4749-0d6d-4c1e-867e-2cf8d7e53955
+2023-07-15 13:31:36 [INFO] 
+                        Code generated:
+                        ```
+                        df.describe()
+                        ```
+                    
+2023-07-15 13:31:36 [INFO] 
+Code running:
+```
+df.describe()
+```
+2023-07-15 13:31:37 [INFO] Answer:        PassengerId    Survived      Pclass         Age       SibSp       Parch        Fare
+count   891.000000  891.000000  891.000000  714.000000  891.000000  891.000000  891.000000
+mean    446.000000    0.383838    2.308642   29.699118    0.523008    0.381594   32.204208
+std     257.353842    0.486592    0.836071   14.526497    1.102743    0.806057   49.693429
+min       1.000000    0.000000    1.000000    0.420000    0.000000    0.000000    0.000000
+25%     223.500000    0.000000    2.000000   20.125000    0.000000    0.000000    7.910400
+50%     446.000000    0.000000    3.000000   28.000000    0.000000    0.000000   14.454200
+75%     668.500000    1.000000    3.000000   38.000000    1.000000    0.000000   31.000000
+max     891.000000    1.000000    3.000000   80.000000    8.000000    6.000000  512.329200
+2023-07-15 13:31:37 [INFO] Executed in: 0.5511853694915771s
+2023-07-15 13:31:52 [INFO] Question: plot the survival counts for males and females
+2023-07-15 13:31:52 [INFO] Running PandasAI with openai LLM...
+2023-07-15 13:31:52 [INFO] Prompt ID: be528461-8a30-4ae1-8a51-9d5a97310e83
+2023-07-15 13:31:55 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by sex and count the number of survivors
+survival_counts = df.groupby('Sex')['Survived'].sum()
+
+# Plot the survival counts
+plt.bar(survival_counts.index, survival_counts.values)
+plt.xlabel('Sex')
+plt.ylabel('Survival Count')
+plt.title('Survival Counts for Males and Females')
+plt.show()
+                        ```
+                    
+2023-07-15 13:31:55 [INFO] 
+Code running:
+```
+survival_counts = df.groupby('Sex')['Survived'].sum()
+plt.bar(survival_counts.index, survival_counts.values)
+plt.xlabel('Sex')
+plt.ylabel('Survival Count')
+plt.title('Survival Counts for Males and Females')
+plt.show()
+plt.close('all')
+```
+2023-07-15 13:31:55 [INFO] generated new fontManager
+2023-07-15 13:33:09 [INFO] Answer: None
+2023-07-15 13:33:09 [INFO] Executed in: 77.19628643989563s
+2023-07-19 17:38:15 [INFO] Question: plot a grpah between cfd rate in a month
+2023-07-19 17:38:15 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:38:15 [INFO] Prompt ID: dabe0970-f2a9-4a0b-b4b0-51a6eadd67e5
+2023-07-19 17:38:21 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create the dataframe
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'switch is in continuous reboot', 'vrrp deamon is crash', 'vrrp deomon core dump is observed during upgrade', 'continuous flap of clients'],
+        'Category': ['CFD', 'CFD', 'CFD', 'CFD', 'CFD', 'CFD']}
+df = pd.DataFrame(data)
+
+# Plot the graph
+df['Issue'].value_counts().plot(kind='bar')
+plt.xlabel('Issue')
+plt.ylabel('Count')
+plt.title('CFD Rate in a Month')
+plt.show()
+                        ```
+                    
+2023-07-19 17:38:21 [INFO] 
+Code running:
+```
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'switch is in continuous reboot', 'vrrp deamon is crash', 'vrrp deomon core dump is observed during upgrade', 'continuous flap of clients'], 'Category': ['CFD', 'CFD', 'CFD', 'CFD', 'CFD', 'CFD']}
+df['Issue'].value_counts().plot(kind='bar')
+plt.xlabel('Issue')
+plt.ylabel('Count')
+plt.title('CFD Rate in a Month')
+plt.show()
+plt.close('all')
+```
+2023-07-19 17:38:38 [INFO] Answer: None
+2023-07-19 17:38:38 [INFO] Executed in: 22.753076791763306s
+2023-07-19 17:39:28 [INFO] Question: what is the summary of dataset
+2023-07-19 17:39:28 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:39:28 [INFO] Prompt ID: 3e9a2cb5-2d71-454b-a08d-dee2991542b6
+2023-07-19 17:39:29 [INFO] 
+                        Code generated:
+                        ```
+                        df.info()
+                        ```
+                    
+2023-07-19 17:39:29 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:39:29 [INFO] Answer: None
+2023-07-19 17:39:29 [INFO] Executed in: 0.9107725620269775s
+2023-07-19 17:39:35 [INFO] Question: what is the summary of dataset?
+2023-07-19 17:39:35 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:39:35 [INFO] Prompt ID: 6314d124-abef-4f9a-b3b0-bd1464abe665
+2023-07-19 17:39:36 [INFO] 
+                        Code generated:
+                        ```
+                        df.info()
+                        ```
+                    
+2023-07-19 17:39:36 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:39:36 [INFO] Answer: None
+2023-07-19 17:39:36 [INFO] Executed in: 0.6750545501708984s
+2023-07-19 17:39:55 [INFO] Question: what is the summary of dataset
+2023-07-19 17:39:55 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:39:55 [INFO] Prompt ID: 5dddead2-0590-43d3-9651-250db4f91dcb
+2023-07-19 17:39:55 [INFO] Using cached response
+2023-07-19 17:39:55 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:39:55 [INFO] Answer: None
+2023-07-19 17:39:55 [INFO] Executed in: 0.03524613380432129s
+2023-07-19 17:39:55 [INFO] Question: what is the summary of dataset
+2023-07-19 17:39:55 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:39:55 [INFO] Prompt ID: 39a2219f-635a-4d2a-bfa5-661914d362d4
+2023-07-19 17:39:55 [INFO] Using cached response
+2023-07-19 17:39:55 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:39:55 [INFO] Answer: None
+2023-07-19 17:39:55 [INFO] Executed in: 0.039137840270996094s
+2023-07-19 17:40:00 [INFO] Question: what is the summary of dataset
+2023-07-19 17:40:00 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:40:00 [INFO] Prompt ID: 72f9ef27-8be6-49ab-9061-d6f261f5d4ae
+2023-07-19 17:40:00 [INFO] Using cached response
+2023-07-19 17:40:00 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:40:00 [INFO] Answer: None
+2023-07-19 17:40:00 [INFO] Executed in: 0.02699875831604004s
+2023-07-19 17:40:03 [INFO] Question: what is the summary of dataset?
+2023-07-19 17:40:03 [INFO] Running PandasAI with openai LLM...
+2023-07-19 17:40:03 [INFO] Prompt ID: 09d31774-135c-4e2a-bf6d-0fa487132f02
+2023-07-19 17:40:03 [INFO] Using cached response
+2023-07-19 17:40:03 [INFO] 
+Code running:
+```
+df.info()
+```
+2023-07-19 17:40:03 [INFO] Answer: None
+2023-07-19 17:40:03 [INFO] Executed in: 0.030575990676879883s
+2023-07-20 14:59:33 [INFO] Question: what this data set about
+2023-07-20 14:59:33 [INFO] Running PandasAI with openai LLM...
+2023-07-20 14:59:33 [INFO] Prompt ID: e602c700-bb6c-4a11-8a92-cef748020108
+2023-07-20 14:59:37 [INFO] 
+                        Code generated:
+                        ```
+                        print(df['Category'].unique())
+                        ```
+                    
+2023-07-20 14:59:37 [INFO] 
+Code running:
+```
+print(df['Category'].unique())
+```
+2023-07-20 14:59:38 [INFO] Answer: Index(['switchd is crashing', 'CFD'], dtype='object')
+2023-07-20 14:59:38 [INFO] Executed in: 4.618605852127075s
+2023-07-20 14:59:58 [INFO] Question: plot CFD vs None
+
+2023-07-20 14:59:58 [INFO] Running PandasAI with openai LLM...
+2023-07-20 14:59:58 [INFO] Prompt ID: b37edce9-f029-4cc6-b736-2442cca660f3
+2023-07-20 15:00:08 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create the dataframe
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'vrrp deomon core dump is observed during upgrade',
+                  'continous flap of clients', 'switch is in continous reboot', 'vrrp deamon is crash'],
+        'CFD': [1, 1, 1, 1, 1, 1],
+        'None': [0, 0, 0, 0, 0, 0]}
+df = pd.DataFrame(data)
+
+# Plot CFD vs None
+df.plot(x='CFD', y='None', kind='scatter')
+plt.xlabel('CFD')
+plt.ylabel('None')
+plt.title('CFD vs None')
+plt.show()
+                        ```
+                    
+2023-07-20 15:00:08 [INFO] 
+Code running:
+```
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'vrrp deomon core dump is observed during upgrade', 'continous flap of clients', 'switch is in continous reboot', 'vrrp deamon is crash'], 'CFD': [1, 1, 1, 1, 1, 1], 'None': [0, 0, 0, 0, 0, 0]}
+df.plot(x='CFD', y='None', kind='scatter')
+plt.xlabel('CFD')
+plt.ylabel('None')
+plt.title('CFD vs None')
+plt.show()
+plt.close('all')
+```
+2023-07-20 15:00:26 [INFO] Answer: None
+2023-07-20 15:00:26 [INFO] Executed in: 28.50285029411316s
+2023-07-20 15:01:00 [INFO] Question: plot this data set
+
+
+2023-07-20 15:01:00 [INFO] Running PandasAI with openai LLM...
+2023-07-20 15:01:00 [INFO] Prompt ID: 01462f7f-508d-4e97-a014-2831b1926e90
+2023-07-20 15:01:06 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create the dataframe
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'switch is in continous reboot', 'vrrp deomon core dump is observed during upgrade', 'continous flap of clients', 'vrrp deamon is crash'],
+        'Category': ['CFD', 'CFD', 'CFD', 'CFD', 'CFD', 'CFD']}
+df = pd.DataFrame(data)
+
+# Plot the data
+plt.figure(figsize=(10, 6))
+plt.bar(df['Issue'], df['Category'])
+plt.xlabel('Issue')
+plt.ylabel('Category')
+plt.title('Issues')
+plt.xticks(rotation=90)
+plt.show()
+                        ```
+                    
+2023-07-20 15:01:06 [INFO] 
+Code running:
+```
+data = {'Issue': ['switchd is crashing', 'clients are not coming up', 'switch is in continous reboot', 'vrrp deomon core dump is observed during upgrade', 'continous flap of clients', 'vrrp deamon is crash'], 'Category': ['CFD', 'CFD', 'CFD', 'CFD', 'CFD', 'CFD']}
+plt.figure(figsize=(10, 6))
+plt.bar(df['Issue'], df['Category'])
+plt.xlabel('Issue')
+plt.ylabel('Category')
+plt.title('Issues')
+plt.xticks(rotation=90)
+plt.show()
+plt.close('all')
+```
+2023-07-20 15:01:24 [INFO] Answer: None
+2023-07-20 15:01:24 [INFO] Executed in: 23.358904361724854s
+2023-07-20 22:48:56 [INFO] Question: plot Customer vs CFD_count
+2023-07-20 22:48:56 [INFO] Running PandasAI with openai LLM...
+2023-07-20 22:48:56 [INFO] Prompt ID: f6d3f11f-b804-471a-96d8-1c0274594e6b
+2023-07-20 22:49:01 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Creating the dataframe
+data = {'Customer': ['customer4', 'customer1', 'customer3', 'customer5', 'customer2'],
+        'CFD_count': [40, 30, 50, 20, 20]}
+df = pd.DataFrame(data)
+
+# Plotting Customer vs CFD_count
+df.plot(x='Customer', y='CFD_count', kind='bar')
+plt.xlabel('Customer')
+plt.ylabel('CFD_count')
+plt.title('Customer vs CFD_count')
+plt.show()
+                        ```
+                    
+2023-07-20 22:49:01 [INFO] 
+Code running:
+```
+data = {'Customer': ['customer4', 'customer1', 'customer3', 'customer5', 'customer2'], 'CFD_count': [40, 30, 50, 20, 20]}
+df.plot(x='Customer', y='CFD_count', kind='bar')
+plt.xlabel('Customer')
+plt.ylabel('CFD_count')
+plt.title('Customer vs CFD_count')
+plt.show()
+plt.close('all')
+```
+2023-07-20 22:57:13 [INFO] Question: plot Customer vs CFD_count
+2023-07-20 22:57:13 [INFO] Running PandasAI with openai LLM...
+2023-07-20 22:57:13 [INFO] Prompt ID: ad4ba928-2bfa-4741-89b0-618fc7e8499f
+2023-07-20 22:57:13 [INFO] Using cached response
+2023-07-20 22:57:13 [INFO] 
+Code running:
+```
+data = {'Customer': ['customer4', 'customer1', 'customer3', 'customer5', 'customer2'], 'CFD_count': [40, 30, 50, 20, 20]}
+df.plot(x='Customer', y='CFD_count', kind='bar')
+plt.xlabel('Customer')
+plt.ylabel('CFD_count')
+plt.title('Customer vs CFD_count')
+plt.show()
+plt.close('all')
+```
