@@ -1,0 +1,20 @@
+
+explain aruba-evpn vxlan
+Explain aruba evpn vxlan 
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+which aos-cx platforms support vxlan
+how to configure vxlan on 6300 switch 
+how to configure vxlan
+how to configure vxlan
+how to configure vxlan
+how to configure vxlan 
+how to configure vxlan
+how to configure vxlan
+how to configure vxlan 
